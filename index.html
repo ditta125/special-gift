@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Surprise</title>
+    <style>
+        body {
+            background-color: #fff5b1;
+            text-align: center;
+            font-family: 'Arial', sans-serif;
+            position: relative;
+        }
+        h1 {
+            font-size: 3em;
+            color: #f4b400;
+            margin-top: 20%;
+        }
+        p {
+            font-size: 1.5em;
+            color: #d67d10;
+        }
+        .button {
+            background-color: #f4b400;
+            color: white;
+            border: none;
+            padding: 15px 25px;
+            font-size: 1.2em;
+            cursor: pointer;
+            border-radius: 10px;
+            text-decoration: none;
+            margin-top: 20px;
+            display: none;
+        }
+        .button:hover {
+            background-color: #f7a900;
+        }
+        
+        /* Hearts and Flowers Animation */
+        .heart-animation {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            clip-path: polygon(50% 0%, 100% 35%, 80% 100%, 50% 80%, 20% 100%, 0% 35%);
+            animation: heartPop 5s infinite ease-in-out;
+            z-index: -1;
+        }
+        
+        .flower-animation {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-image: url('https://cdn.pixabay.com/photo/2017/11/07/13/48/flower-2928482_960_720.png');
+            background-size: cover;
+            animation: flowerFloat 5s infinite ease-in-out;
+            z-index: -1;
+        }
+
+        @keyframes heartPop {
+            0% { transform: translateY(0) scale(1); }
+            50% { transform: translateY(-100px) scale(1.5); }
+            100% { transform: translateY(0) scale(1); }
+        }
+
+        @keyframes flowerFloat {
+            0% { transform: translateY(0) scale(1); }
+            50% { transform: translateY(-100px) scale(1.5); }
+            100% { transform: translateY(0) scale(1); }
+        }
+    </style>
+</head>
+<body>
+    <h1>Good Morning Sunflower 🌻</h1>
+    <p>I have a special message just for you...</p>
+    <button id="specialButton" class="button">I have something special for you</button>
+    
+    <!-- Floating Hearts -->
+    <div class="heart-animation" style="top: 10%; left: 20%;"></div>
+    <div class="heart-animation" style="top: 30%; left: 50%;"></div>
+    <div class="heart-animation" style="top: 50%; left: 80%;"></div>
+    
+    <!-- Floating Flowers -->
+    <div class="flower-animation" style="top: 20%; left: 40%;"></div>
+    <div class="flower-animation" style="top: 60%; left: 70%;"></div>
+
+    <script>
+        // Show the button after 3 seconds
+        setTimeout(function() {
+            document.getElementById('specialButton').style.display = 'inline-block';
+        }, 3000);
+
+        // Redirect to the next page when the button is clicked
+        document.getElementById('specialButton').addEventListener('click', function() {
+            window.location.href = "special-surprise.html";
+        });
+    </script>
+</body>
+</html>

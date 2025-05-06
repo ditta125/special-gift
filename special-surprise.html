@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Special Surprise</title>
+    <style>
+        body {
+            background-color: #fff5b1;
+            text-align: center;
+            font-family: 'Arial', sans-serif;
+            color: white;
+        }
+        h1 {
+            font-size: 3em;
+            color: #d67d10;
+            margin-top: 20%;
+        }
+        p {
+            font-size: 1.5em;
+            margin-top: 20px;
+        }
+        .button {
+            background-color: #f4b400;
+            color: white;
+            border: none;
+            padding: 15px 25px;
+            font-size: 1.2em;
+            cursor: pointer;
+            border-radius: 10px;
+            margin-top: 30px;
+        }
+        .button:hover {
+            background-color: #f7a900;
+        }
+        .date-container {
+            margin-top: 40px;
+        }
+        input[type="date"] {
+            font-size: 1.2em;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #d67d10;
+        }
+    </style>
+</head>
+<body>
+    <h1>Surprise! 🎉</h1>
+    <p>Happy birthday to the most beautiful person in my life!</p>
+    <div class="date-container">
+        <label for="dob">Enter your date of birth:</label>
+        <br>
+        <input type="date" id="dob" name="dob">
+        <br><br>
+        <button class="button" onclick="showDate()">Enter Your Day</button>
+    </div>
+    
+    <script>
+        function showDate() {
+            var dateInput = document.getElementById('dob').value;
+            if (dateInput === '1998-05-08') {
+                window.location.href = "celebration.html";
+            } else {
+                alert("Please enter the correct date: 08-May-1998");
+            }
+        }
+    </script>
+</body>
+</html>
